@@ -38,12 +38,11 @@ end
 
 #Returns capital cities from a hash of countries as an array
 def give_me_capital_cities(countries_hash)
-  capitals=Array.new
-  i=0
+  capitals=Array.new   #note: could have done captials = []
+  
   countries_hash.each {|key, value|
-    capitals[i]=countries_hash[key][:capital]
-     i+=1
-  }
+    capitals << countries_hash[key][:capital]
+    }
 
   return capitals
 
